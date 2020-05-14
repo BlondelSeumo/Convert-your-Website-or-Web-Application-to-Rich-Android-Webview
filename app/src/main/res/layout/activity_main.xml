@@ -1,0 +1,109 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/adViewH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:adSize="SMART_BANNER"
+                app:adUnitId="@string/ad_banner_id" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/adViewH"
+            tools:context=".MainActivity">
+
+            <com.sherdle.webtoapp.widget.SwipeableViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="?attr/actionBarSize" />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/header_container"
+                style="@style/ToolBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="3dp"
+                android:fitsSystemWindows="false"
+                android:orientation="vertical"
+                app:theme="@style/Toolbar"
+                >
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    style="@style/ToolBarStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="?attr/actionBarSize"
+                    app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:visibility="gone"
+                    android:padding="15dp"
+                    android:scaleType="centerInside"
+                    android:layout_gravity="center"
+                    android:id="@+id/toolbar_icon" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="center_horizontal"
+                    app:tabGravity="fill"
+                    app:tabMode="scrollable"
+                    app:tabIndicatorColor="?toolbarForeground"
+                    app:tabSelectedTextColor="?toolbarForeground"
+                    app:tabTextColor="?toolbarForeground"/>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageLoading1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/vert_loading"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/drawerBackground"
+        android:fitsSystemWindows="true"
+        app:itemBackground="@drawable/drawer_item_background"
+        app:itemTextColor="@color/drawerText"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/activity_main_drawer" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

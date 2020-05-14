@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#3F51B5</color>
+    <color name="primaryDark">#303F9F</color>
+    <color name="primaryTransparent">#1F2196f3</color>
+    <color name="accent">#03A9F4</color>
+
+    <color name="drawerBackground">#ffffff</color>
+    <color name="drawerText">#424242</color>
+
+    <color name="statusBarLight">#eeeeee</color>
+    <color name="navigationBarDark">#606060</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+
+</resources>

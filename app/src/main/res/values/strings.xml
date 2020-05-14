@@ -1,0 +1,50 @@
+<resources>
+    <!--Configure your App's name, as displayed in the launcher and optionally the Toolbar -->
+    <string name="app_name">WebView App</string>
+
+    <!--Configure your Admob ID below, or leave empty if you do not want to enable Ads in your app -->
+    <string name="ad_banner_id"></string>
+    <string name="ad_interstitial_id"></string>
+
+    <string name="onesignal_app_id"></string>
+
+    <!-- Translate Strings below -->
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="stop">Stop</string>
+    <string name="no_connection">No internet connection</string>
+    <string name="retry">Retry</string>
+    <string name="ok">Ok</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="share">Share</string>
+    <string name="error">An error occurred</string>
+    <string name="about">About</string>
+    <string name="home">Home</string>
+    <string name="close">Close</string>
+    <string name="download">Download</string>
+    <string name="saved">Saved at: </string>
+    <string name="sharetitle">Share this!</string>
+    <string name="notification_settings">Notifications</string>
+    <string name="download_fail">Download failed</string>
+    <string name="download_done">The file has been saved in the downloads folder, open it by tapping the file in your notifications</string>
+    <string name="exit_message">Thank you for using our app!</string>
+    <string name="no_app_message">No app found to complete this action!</string>
+    <string name="dialog_about"><![CDATA[Thank you for downloading our application!]]></string>
+    <string name="drawer_open">Open drawer</string>
+    <string name="drawer_close">Close drawer</string>
+    <string name="notification_error_ssl_cert_invalid">The SSL Certificate of the server could not be verified. Would you like to continue?</string>
+
+    <string name="download_permission_explaination">In order to download files, you need to grant us permission to your storage.\n\nAfter granting us access, you may go ahead and download the file.</string>
+
+    <string name="common_permission_explaination">In order to use this app, you need to grant us some permissions.</string>
+    <string name="common_permission_grant">Grant permission</string>
+
+    <string name="share_body">I came across %1$s using %2$s</string>
+
+    <string name="rate_later">Perhaps later</string>
+    <string name="rate_never">No thanks</string>
+    <string name="rate_yes">Yes</string>
+    <string name="rate_message">We hope you enjoy using %1$s. Would you like to help us by rating us in the Store?</string>
+    <string name="rate_title">Enjoying our app?</string>
+</resources>

@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.google.gms:google-services:4.3.3'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+ext {
+    supportlib_version = '29.0.0'
+    gps_version = '[16.0.0, 17.0.0)'
+    fb_version = '[16.0.0, 18.0.0)'
+}
+
+//Ensure that all dependencies use the same version of the Android Support library
+/*configurations.all {
+        resolutionStrategy.eachDependency { details ->
+            if (details.requested.group == 'com.android.support'
+                    && !details.requested.name.contains('multidex')) {
+                details.useVersion "$supportlib_version"
+            }
+            if (details.requested.group == 'com.google.android.gms'
+                    && !details.requested.name.contains('multidex')) {
+                details.useVersion "$gps_version"
+            }
+            if (details.requested.group == 'com.google.firebase'
+                    && !details.requested.name.contains('multidex')) {
+                details.useVersion "$fb_version"
+            }
+        }
+    }*/
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}

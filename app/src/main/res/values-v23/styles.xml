@@ -1,0 +1,6 @@
+<resources>
+    <style name="AppTheme.Light" parent="AppTheme.BaseLight">
+        <item name="colorPrimaryDark">@color/statusBarLight</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
